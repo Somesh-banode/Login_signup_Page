@@ -1,0 +1,68 @@
+we have 2 main pages in this project
+1.login page
+2.signup page
+
+we have crated 2 project inside single project ("project_1/project")i.e.
+ 1. myapp 2.signup (this two contains backend project of myapp and signup page)
+whereas front end of these is in templates folder in same project directory,
+
+in simple words,
+template has 2 folder "myapp" and "signup" that contains html file as frontend 
+and in project we have "myapp" which contains backend of myapp and "signup" which contains backend of signup page.
+
+
+
+//////////////////to start project/////////
+python manage.py startup signup
+
+run above line in cmd inside "project" this create signup app
+
+
+Procedure:
+
+1. Setup Development Environment:
+   - Install VS Code.
+   - Install Python.
+   - Install Django.
+
+2. Create Django Project:
+   - Open terminal and run django-admin startproject myproject.
+   - Navigate to the project directory with cd myproject.
+
+3. Create Django App:
+   - Run python manage.py startapp users.
+   - Add 'users' to the INSTALLED_APPS in settings.py.
+
+4. Define User Model (if extending User):
+   - In users/models.py, define the user model if extending the default Django User model.
+
+5. Create Signup Form:
+   - In users/forms.py, create a form class using Django forms.
+
+6. Setup URLs:
+   - In myproject/urls.py, include the users app URLs.
+   - In users/urls.py, define the path for the signup view.
+
+7. Create Signup View:
+   - In users/views.py, create a view function for handling the signup form.
+
+8. Create HTML Template:
+   - In users/templates/users, create signup.html.
+   - Add input fields (username, password, email, etc.) in signup.html.
+
+9. Styling with CSS:
+   - In static/css, create a CSS file (e.g., style.css).
+   - Link the CSS file in the signup.html.
+
+10. Database Migrations:
+    - Run python manage.py makemigrations.
+    - Run python manage.py migrate.
+
+11. Run Development Server:
+    - Run python manage.py runserver.
+    - Open the browser and navigate to http://127.0.0.1:8000/signup.
+
+#### Software Needed:
+- VS Code
+- Python
+- Django

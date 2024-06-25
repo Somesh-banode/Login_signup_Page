@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <center><H1>Login Form</H1>
+    <form action="#" method="POST">
+        {% csrf_token %}
+        <!-- {% load static %} -->
+        {{ form.as_p }}      <!--   form as paragrap tag-->
+       
+            <!--
+            <div class="container">
+                <div class="imagcontainer">
+                    <img src = "{% static 'myapp/avatar_img1.jpg' %}" width="200px" alt="Avatar">
+                </div>
+                <label for="email"><b>User Email</b></label>
+                <input type="email" placeholder="Enter your email" float="right" name="email" required><br>
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter your password" float="right" name="password" required><br>
+            </div>
+             -->   
+                <button type="submit"><b>Login</b></button>
+                <!-- <p>Don't have an account?<a href="http://localhost:8000/signup/">signup</a> </p> -->
+                <p>Don't have an account? <a href="{% url 'signup' %}">Signup</a></p>
+        </center>
+    </form>
+</body>
+</html>
